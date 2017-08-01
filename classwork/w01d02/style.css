@@ -38,4 +38,14 @@ footer {
 section {
 	padding: 20px;
 	margin: 20px;
+	width: 400px;
+	height: 250px;
+	display: inline-block;
+	float: left;
+}
+aside{
+	width: 200px;
+	height: 500px;
+	background-color: green;
+	display: inline-block;
 }
