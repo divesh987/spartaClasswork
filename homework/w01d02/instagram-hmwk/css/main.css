@@ -34,6 +34,8 @@ aside {
 	display: inline-block;
 	margin-left: 50px;
 	margin-top: 100px;
+/*	margin-top: 10%;
+	margin-left: 20%;*/
 	float: left;
 
 }
@@ -45,6 +47,8 @@ main {
 section {
 	margin-left: 420px;
 	margin-top: 220px;
+/*	margin-top: 30%;
+	margin-left: 80%;*/
 	height: 200px;
 	width: 490px;
 	padding: 15px;
@@ -59,6 +63,8 @@ section p {
 	float: left;
 	margin-top: 120px;
 	margin-left: 50px;
+/*	margin-left: 20%;
+	margin-bottom: 50%;*/
 
 }
 .heading {
