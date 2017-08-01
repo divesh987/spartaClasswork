@@ -22,3 +22,20 @@ li.special {
 ul li {
 	font-size: 50px;
 }
+section:nth-child(2) {
+	background-color: grey;
+}
+/* Layout */
+header {
+	border: 2px solid red;
+}
+main {
+	border: 2px solid blue;
+}
+footer {
+	border: 2px solid yellow;
+}
+section {
+	padding: 20px;
+	margin: 20px;
+}

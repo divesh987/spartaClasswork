@@ -1,0 +1,26 @@
+hmtl {
+	font-size: 16px;
+
+}
+h1 {
+	color: red;
+	font-weight: bold;
+	margin: left;
+	margin: right;
+}
+body {
+	background-color: yellow;
+}
+article {
+	border: 5px solid red;
+	display: inline-block;
+	padding: 2px;
+}
+article p {
+	font-size: 25px;
+
+}
+.logo {
+	background-color: red;
+	padding-right: 100%;
+}
