@@ -16,6 +16,9 @@ body {
 	width: 100%;
 	
 }
+span {
+	font-weight: bold;
+}
 footer {
 	float: left;
 	display: inline-block;
@@ -23,7 +26,7 @@ footer {
 	margin-left: 20%;
 }
 footer li {
-display: inline-block;
+	display: inline-block;
 	margin-left: 20px;
 	color: #003569;
 }
@@ -51,7 +54,7 @@ section {
 	margin-left: 80%;*/
 	height: 200px;
 	width: 490px;
-	padding: 15px;
+	padding: 20px;
 	background-image: url("../images/frame.png");
 	background-repeat: no-repeat;
 }
@@ -70,5 +73,11 @@ section p {
 .heading {
 	font-size: 25px;
 	color: #003569;
+}
+.android {
+	margin-left: 20px;
+}
+.copyright{
+	color: grey;
 }
 
