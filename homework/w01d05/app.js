@@ -34,6 +34,7 @@ switch(choice) {
 			} else if (cChoice=="Scissors"){
 				alert("Computer Chose " + cChoice + ", Scissors beats " + pChoice + "\n" + "Computer wins!" );
 			}
+		break;
 		case "Scissors":
 		if (cChoice=="Rock"){
 				alert("Computer Chose " + cChoice + ", Rock beats " + pChoice + "\n" + "Computer wins");
@@ -42,7 +43,9 @@ switch(choice) {
 			} else if (cChoice=="Scissors"){
 				alert("Computer Chose " + cChoice + ", Scissors is the same as " + pChoice + "\n" + "Tie Game!" );
 			}
-
+		break;
+		default:
+			alert("Not a valid option");
 
 	}
 
