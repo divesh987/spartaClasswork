@@ -89,29 +89,28 @@ break;
 							cCount++;
 						}
 					break;
-		case "Scissors":
-		if (cChoice=="Rock"){
-				alert("Computer Chose " + cChoice + ", Rock beats " + pChoice + "\n" + "Computer wins");
-				cCount++;
-			}else if (cChoice == "Paper"){
-				alert("Computer Chose " + cChoice + ", Scissors beats " + cChoice + "\n"  + playerName + " wins!");
-				pCount++
-			} else if (cChoice=="Scissors"){
-				alert("Computer Chose " + cChoice + ", Scissors is the same as " + pChoice + "\n" + "Tie Game!" );
-			}
-		break;
-		default:
-			alert("Not a valid option");
+					case "Scissors":
+						if (cChoice=="Rock"){
+							alert("Computer Chose " + cChoice + ", Rock beats " + pChoice + "\n" + "Computer wins");
+							cCount++;
+						}else if (cChoice == "Paper"){
+							alert("Computer Chose " + cChoice + ", Scissors beats " + cChoice + "\n"  + playerName + " wins!");
+							pCount++
+						} else if (cChoice=="Scissors"){
+							alert("Computer Chose " + cChoice + ", Scissors is the same as " + pChoice + "\n" + "Tie Game!" );
+						}
+					break;
+					default:
+						alert("Not a valid option");
 
+				}
+		} while (pCount<=2 && cCount<=2);
+		if (cCount==3){
+			alert("Computer wins");
+		} else if (pCount==3){
+			alert(playerName + " wins!")
 		}
-	} while (pCount<=2 && cCount<=2);
-	if (cCount==3){
-		alert("Computer wins");
-	} else if (pCount==3){
-		alert(playerName + " wins!")
-	}
-
-	break;
+break;
 	case "c":
 		var cRandom = Math.random();
 		var cChoice;
