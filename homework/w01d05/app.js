@@ -18,8 +18,8 @@ switch(choice) {
 	}
 
 	var pChoice = prompt("Choose Between Rock, Paper and Scissors: ");
-	switch(pChoice){
-		case "Rock":
+	switch(pChoice.toLowerCase()){
+		case "rock":
 			if (cChoice=="Rock"){
 				alert("Computer Chose " + cChoice + ", Rock is the same as " + pChoice + "\n Tie Game!" );
 			}else if (cChoice == "Paper"){
@@ -28,7 +28,7 @@ switch(choice) {
 				alert("Computer Chose " + cChoice + ", Rock beats " + cChoice + "\n" + playerName + " wins" );
 			}
 		break;
-		case "Paper":
+		case "paper":
 			if (cChoice=="Rock"){
 				alert("Computer Chose " + cChoice + ", Paper beats " + cChoice + "\n" + playerName + " wins");
 			}else if (cChoice == "Paper"){
@@ -37,7 +37,7 @@ switch(choice) {
 				alert("Computer Chose " + cChoice + ", Scissors beats " + pChoice + "\n" + "Computer wins!" );
 			}
 		break;
-		case "Scissors":
+		case "scissors":
 		if (cChoice=="Rock"){
 				alert("Computer Chose " + cChoice + ", Rock beats " + pChoice + "\n" + "Computer wins");
 			}else if (cChoice == "Paper"){
@@ -66,8 +66,8 @@ break;
 				}
 
 				var pChoice = prompt("Choose Between Rock, Paper and Scissors: ");
-				switch(pChoice){
-					case "Rock":
+				switch(pChoice.toLowerCase()){
+					case "rock":
 						if (cChoice=="Rock"){
 							alert("Computer Chose " + cChoice + ", Rock is the same as " + pChoice + "\n Tie Game!" );
 							alert("Scores \n " + playerName + ": " + pCount + "\n Computer: " + cCount);
@@ -81,7 +81,7 @@ break;
 							alert("Scores \n " + playerName + ": " + pCount + "\n Computer: " + cCount);
 						}
 					break;
-					case "Paper":
+					case "paper":
 						if (cChoice=="Rock"){
 							alert("Computer Chose " + cChoice + ", Paper beats " + cChoice + "\n" + playerName + " wins");
 							pCount++;
@@ -95,7 +95,7 @@ break;
 							alert("Scores \n " + playerName + ": " + pCount + "\n Computer: " + cCount);
 						}
 					break;
-					case "Scissors":
+					case "scissors":
 						if (cChoice=="Rock"){
 							alert("Computer Chose " + cChoice + ", Rock beats " + pChoice + "\n" + "Computer wins");
 							cCount++;
@@ -135,8 +135,8 @@ break;
 			cChoice="Spock";
 		}
 		var pChoice = prompt("Choose Between Rock, Paper, Scissors, Lizard, Spock: ");
-		switch(pChoice){
-			case "Rock":
+		switch(pChoice.toLowerCase()){
+			case "rock":
 				if (cChoice=="Rock"){
 					alert("Computer Chose " + cChoice + ", Rock is the same as " + pChoice + "\n Tie Game!" );
 					alert("Scores \n " + playerName + ": " + pCount + "\n Computer: " + cCount);
@@ -159,7 +159,7 @@ break;
 					alert("Scores \n " + playerName + ": " + pCount + "\n Computer: " + cCount);
 				}
 			break;
-			case "Paper":
+			case "paper":
 				if (cChoice=="Rock"){
 					alert("Computer Chose " + cChoice + ", Paper beats " + cChoice + "\n" + playerName + " wins!");
 					pCount++;
@@ -182,7 +182,7 @@ break;
 					alert("Scores \n " + playerName + ": " + pCount + "\n Computer: " + cCount);
 				}
 			break;
-			case "Scissors":
+			case "scissors":
 			if (cChoice=="Rock"){
 				alert("Computer Chose " + cChoice + ", Rock beats " + pChoice + "\n" + "Computer wins");
 				cCount++;
@@ -205,7 +205,7 @@ break;
 				alert("Scores \n " + playerName + ": " + pCount + "\n Computer: " + cCount);
 			}
 		break;
-		case "Lizard":
+		case "lizard":
 		if (cChoice=="Rock"){
 				alert("Computer Chose " + cChoice + ", Rock beats " + pChoice + "\n"  + "Computer wins!");
 				cCount++;
@@ -228,7 +228,7 @@ break;
 				alert("Scores \n " + playerName + ": " + pCount + "\n Computer: " + cCount);
 			}
 		break;
-		case "Spock":
+		case "spock":
 		if (cChoice=="Rock"){
 				alert("Computer Chose " + cChoice + ", Spock beats " + cChoice + "\n"  + playerName + " wins!");
 				pCount++;
