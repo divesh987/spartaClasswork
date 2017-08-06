@@ -9,9 +9,9 @@ switch(choice) {
     var cChoice;
 	if(cRandom >=0 && cRandom<= 0.33){
 		cChoice = "Rock";
-	} else if(cRandom >=0.34 && cRandom<=0.66){
+	} else if(cRandom >0.33 && cRandom<=0.66){
 		cChoice= "Scissors";
-	} else if (cRandom >= 0.67 && cRandom<=1){
+	} else if (cRandom > 0.66 && cRandom<=1){
 		cChoice= "Paper";
 	}
 
@@ -70,34 +70,43 @@ break;
 					case "Rock":
 						if (cChoice=="Rock"){
 							alert("Computer Chose " + cChoice + ", Rock is the same as " + pChoice + "\n Tie Game!" );
+							alert("Scores \n " + playerName + ": " + pCount + "\n Computer: " + cCount);
 						}else if (cChoice == "Paper"){
 							alert("Computer Chose " + cChoice + ", Paper beats " + pChoice + "\n Computer wins!" );
 							cCount++;
+							alert("Scores \n " + playerName + ": " + pCount + "\n Computer: " + cCount);
 						} else if (cChoice=="Scissors"){
 							alert("Computer Chose " + cChoice + ", Rock beats " + cChoice + "\n" + playerName + " wins" );
 							pCount++;
+							alert("Scores \n " + playerName + ": " + pCount + "\n Computer: " + cCount);
 						}
 					break;
 					case "Paper":
 						if (cChoice=="Rock"){
 							alert("Computer Chose " + cChoice + ", Paper beats " + cChoice + "\n" + playerName + " wins");
 							pCount++;
+							alert("Scores \n " + playerName + ": " + pCount + "\n Computer: " + cCount);
 						}else if (cChoice == "Paper"){
 							alert("Computer Chose " + cChoice + ", Paper is the same as " + pChoice + "\n Tie Game!" );
+							alert("Scores \n " + playerName + ": " + pCount + "\n Computer: " + cCount);
 						} else if (cChoice=="Scissors"){
 							alert("Computer Chose " + cChoice + ", Scissors beats " + pChoice + "\n" + "Computer wins!" );
 							cCount++;
+							alert("Scores \n " + playerName + ": " + pCount + "\n Computer: " + cCount);
 						}
 					break;
 					case "Scissors":
 						if (cChoice=="Rock"){
 							alert("Computer Chose " + cChoice + ", Rock beats " + pChoice + "\n" + "Computer wins");
 							cCount++;
+							alert("Scores \n " + playerName + ": " + pCount + "\n Computer: " + cCount);
 						}else if (cChoice == "Paper"){
 							alert("Computer Chose " + cChoice + ", Scissors beats " + cChoice + "\n"  + playerName + " wins!");
 							pCount++
+							alert("Scores \n " + playerName + ": " + pCount + "\n Computer: " + cCount);
 						} else if (cChoice=="Scissors"){
 							alert("Computer Chose " + cChoice + ", Scissors is the same as " + pChoice + "\n" + "Tie Game!" );
+							alert("Scores \n " + playerName + ": " + pCount + "\n Computer: " + cCount);
 						}
 					break;
 					default:
