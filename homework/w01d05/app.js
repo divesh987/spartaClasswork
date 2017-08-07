@@ -113,7 +113,8 @@ break;
 						alert("Not a valid option");
 
 				}
-		} while (pCount<=2 && cCount<=2);
+		} while (pCount<3 && cCount<3);
+
 		if (cCount==3){
 			alert("Computer wins");
 		} else if (pCount==3){
@@ -254,7 +255,7 @@ break;
 			alert("Not a valid option");
 
 	}
-	} while (pCount<=2 && cCount<=2);
+	} while (pCount<3 && cCount<3);
 		if (cCount==3){
 			alert("Computer wins");
 		} else if (pCount==3){
