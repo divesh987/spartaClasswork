@@ -20,12 +20,12 @@ function computerChoice() {
 function gameLogic(){
 	var pChoice = prompt("Choose between Rock Paper Scissors Lizard Spock: ");
 	pChoice = pChoice.toLowerCase();
-	if (pChoice=="rock" && cChoice=="scissors"|| pChoice=="rock" && cChoice=="lizard" || pChoice=="scissors" && cChoice=="lizard" || pChoice=="paper" && cChoice=="rock" || pChoice=="paper" && cChoice=="lizard" || pChoice=="scissors" && cChoice=="paper" || pChoice=="lizard" && cChoice=="spock"|| pChoice=="spock" && cChoice=="rock" || pChoice=="spock" && cChoice=="scissors" || pChoice=="paper" && cChoice=="spock"){
+	if (pChoice=="rock" && cChoice=="scissors"|| pChoice=="rock" && cChoice=="lizard" || pChoice=="scissors" && cChoice=="lizard" || pChoice=="paper" && cChoice=="rock" || pChoice=="lizard" && cChoice=="paper" || pChoice=="scissors" && cChoice=="paper" || pChoice=="lizard" && cChoice=="spock"|| pChoice=="spock" && cChoice=="rock" || pChoice=="spock" && cChoice=="scissors" || pChoice=="paper" && cChoice=="spock"){
 		alert("Computer chose " + cChoice + ", " + pChoice +" beats " + cChoice+ "\n" + playerName + " wins!")
 		pScore++;
 		alert("Scores:\n Computer: " + cScore + "\n" + playerName + ": " + pScore);
 	}
-	 else if (cChoice=="rock" && pChoice=="scissors"|| cChoice=="rock" && pChoice=="lizard" || cChoice=="scissors" && pChoice=="lizard" || cChoice=="paper" && pChoice=="rock" || pChoice=="paper" && cChoice=="lizard" || cChoice=="scissors" && pChoice=="paper" || cChoice=="lizard" && pChoice=="spock" || cChoice=="spock" && pChoice=="rock" || cChoice=="spock" && pChoice=="scissors" || cChoice=="paper" && pChoice=="spock"){
+	 else if (cChoice=="rock" && pChoice=="scissors"|| cChoice=="rock" && pChoice=="lizard" || cChoice=="scissors" && pChoice=="lizard" || cChoice=="paper" && pChoice=="rock" || cChoice=="lizard" && pChoice=="paper" || cChoice=="scissors" && pChoice=="paper" || cChoice=="lizard" && pChoice=="spock" || cChoice=="spock" && pChoice=="rock" || cChoice=="spock" && pChoice=="scissors" || cChoice=="paper" && pChoice=="spock"){
 		alert("Computer chose " + cChoice + ", " + cChoice +" beats " + pChoice+ "\n Computer wins!");
 		cScore++;
 		alert("Scores:\n Computer: " + cScore + "\n" + playerName + ": " + pScore);
