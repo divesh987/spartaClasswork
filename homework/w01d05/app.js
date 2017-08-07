@@ -266,3 +266,4 @@ break;
 	default: 
 	alert("Not a valid choice")
 }
+alert("Refresh the page to play again ");
