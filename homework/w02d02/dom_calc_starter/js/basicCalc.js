@@ -114,14 +114,19 @@ console.log(equals.value);
 equals.addEventListener("click",function(){
 	number2=parseInt(display.value);
 	console.log(number2);
-	if(operation=="+"){
+	switch(operation){
+		case "+":
 		result=number1+number2;
-	} else if(operation=="-"){
-		result=parseInt(number1)-parseInt(number2);
-	} else if(operation=="x"){
-		result=parseInt(number1)*parseInt(number2);
-	} else if(operation=="/"){
-		result=parseInt(number1)/parseInt(number2);
+		break;
+		case "-":
+		result=number1-number2;
+		break;
+		case "/":
+		result=number1/number2;
+		break;
+		case "x":
+		result=number1*number2;
+		break;
 	}
 	display.value=result;
 })
