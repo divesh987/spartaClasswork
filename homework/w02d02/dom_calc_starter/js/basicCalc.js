@@ -145,23 +145,18 @@
 
 //Attempt 2 -refactoring attempt
 document.addEventListener('DOMContentLoaded',function(){
-	
 var display = document.getElementsByClassName("display")[0];
-console.log(display);
 var number1;
 var number2;
 var result;
-
 var equals=document.getElementsByName("eq");
 var clear=document.getElementsByName("clear");
-
 var op1=document.getElementsByName("plus");
 var op2=document.getElementsByName("minus");
 var op3=document.getElementsByName("times");
 var op4=document.getElementsByName("div");
 var operation=[op1,op2,op3,op4];
 var finalop;
-
 var num1=document.getElementsByName("one");
 var num2=document.getElementsByName("two");
 var num3=document.getElementsByName("three");
@@ -172,12 +167,9 @@ var num7=document.getElementsByName("seven");
 var num8=document.getElementsByName("eight");
 var num9=document.getElementsByName("nine");
 var num0=document.getElementsByName("zero");
-
 var nums=[num1,num2,num3,num4,num5,num6,num7,num8,num9,num0];
-
 assignAllNumButtons();
 assignAllOperationButtons();
-
 clear[0].addEventListener("click", function(){
 	display.value=null;
 })
@@ -196,7 +188,6 @@ function assignNumButton(x) {
 		display.value+=nums[x][0].value;
 	})
 }
-console.log(display.value)
 function assignOperators(x){
 	operation[x][0].addEventListener("click", function(){
 		number1=parseInt(display.value);
@@ -206,7 +197,6 @@ function assignOperators(x){
 }
 equals[0].addEventListener("click",function(){
 	number2=parseInt(display.value);
-	console.log(finalop)
 	calculation();
 	display.value=result;
 })
