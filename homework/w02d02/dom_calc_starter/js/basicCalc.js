@@ -161,7 +161,6 @@ var op3=document.getElementsByName("times");
 var op4=document.getElementsByName("div");
 var operation=[op1,op2,op3,op4];
 var finalop;
-var calc;
 
 var num1=document.getElementsByName("one");
 var num2=document.getElementsByName("two");
