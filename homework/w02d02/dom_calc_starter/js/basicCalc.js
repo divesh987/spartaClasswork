@@ -75,8 +75,6 @@ console.log(num0.value);
 num0.addEventListener("click",function(){
 	display.value+=num0.value;
 })
-
-
 //operation buttons being assigned 
 var op1 = getInputsByValue("+")[0];
 console.log(op1.value);
@@ -89,14 +87,14 @@ op1.addEventListener("click",function(){
 var op2 = getInputsByValue("-")[0];
 console.log(op2.value);
 op2.addEventListener("click",function(){
-	operation="-"
+	operation="-";
 	number1=parseInt(display.value);
 	console.log(number1);
 	display.value=null;
 })
 var op3 = getInputsByValue("/")[0];
 console.log(op3.value);
-op1.addEventListener("click",function(){
+op3.addEventListener("click",function(){
 	operation="/"
 	number1=parseInt(display.value);
 	console.log(number1);
@@ -116,23 +114,17 @@ console.log(equals.value);
 equals.addEventListener("click",function(){
 	number2=parseInt(display.value);
 	console.log(number2);
-	switch(operation){
-		case "+":
-		result=parseInt(number1)+parseInt(number2);
-		break;
-		case "-":
-		result=number1-number2;
-		break;
-		case "/":
-		result=number1/number2;
-		break;
-		case "x":
-		result=number1*number2;
-		break;
+	if(operation=="+"){
+		result=number1+number2;
+	} else if(operation=="-"){
+		result=parseInt(number1)-parseInt(number2);
+	} else if(operation=="x"){
+		result=parseInt(number1)*parseInt(number2);
+	} else if(operation=="/"){
+		result=parseInt(number1)/parseInt(number2);
 	}
 	display.value=result;
 })
-
 //function to allow getting inputsbyvalue
 function getInputsByValue(value)
 {
