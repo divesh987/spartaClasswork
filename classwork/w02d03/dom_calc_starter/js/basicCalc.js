@@ -15,10 +15,10 @@ var clear = document.getElementsByClassName("clear")[0];
 var display = document.getElementsByClassName("display")[0];
 
 //variable for first number in calculation 
-var first_number =5;
+var first_number =null;
 
 //variable for second number in calculation 
-var second_number =5;
+var second_number =null;
 //variable for operator clicked 
 var operator="+";
 //variable for answer of calculations
@@ -51,12 +51,24 @@ function setupEventListeners(){
 //Functions for calculator
 
 //add
+function add(firstNumber,secondNumber){
+	return firstNumber + secondNumber;
+}
 
 //subtract
+function subtract(firstNumber,secondNumber){
+	return firstNumber - secondNumber;
+}
 
 //multiply
+function multiply(firstNumber,secondNumber){
+	return firstNumber * secondNumber;
+}
 
 //divide
+function divide(firstNumber,secondNumber){
+	return firstNumber / secondNumber;
+}
 
 
 //--------------------------------------------------
@@ -64,6 +76,20 @@ function setupEventListeners(){
 //calculation
 function calculation(firstNumber,operator,secondNumber) {
 	console.log(firstNumber, operator,secondNumber);
+	switch(operator){
+		case "+":
+			display.value=add(first_number,second_number);
+			break;
+		case "-":
+			display.value=subtract(first_number,second_number);
+			break;
+		case "x":
+			display.value=multiply(first_number,second_number);
+			break;
+		case "/":
+			display.value=divide(first_number,second_number);
+			break;
+	}
 
 }
 
@@ -74,7 +100,11 @@ function calculation(firstNumber,operator,secondNumber) {
 
 //clear the calculator
 function clearCalc(){
-	console.log("clearcal ")
+	first_number=null;
+	second_number=null;
+	operator= null;
+	display.value="";
+	console.log(first_number,second_number,operator, "clear");
 
 }
 
@@ -82,19 +112,30 @@ function clearCalc(){
 //display and store the buttons clicked
 function updateAndDisplayNumber(){
 	console.log("number ", this.value)
+	var btn = this.value;
+	display.value=btn;
+	if (first_number===null){
+		first_number=parseFloat(btn);
+		console.log(first_number);
+
+	} else {
+		second_number=parseFloat(btn);
+		console.log(second_number);
+	}
 
 }
-
 
 //display and store the operator 
 
 function updateAndDisplayOperator(){
 	console.log("operator", this.value)
+	operator= this.value;
+	display.value=operator;
 
 }
 
 
 setupEventListeners();
-
+console.log(divide(1,2));
 
 
