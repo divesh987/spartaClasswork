@@ -26,9 +26,14 @@ assignBoxButtons();
 function assignBoxButtons(){
 
 //boxes.html("X");
+// if ($(display.html())=="It is O's turn" || $(display.html())=="It is X's turn"){
     $(boxes).each(function(index,box){
-        onClick(box);
-})
+    	onClick(box);
+
+}) 
+// }else{
+
+//     }
 }
 function onClick(box1){
          $(box1).one('click', function(){
@@ -82,6 +87,12 @@ $(clear.on("click",function(){
 
 	// assignBoxButtons();
 }))
+
+function tieResult(){
+	if($(isEmpty(boxes))==false){
+		$(display.html("Tie Game"))
+	}
+}
 
 })
 
