@@ -1,4 +1,4 @@
-
+// Attempt 1 : WORKS
 // document.addEventListener('DOMContentLoaded',function(){
 	
 // var display = document.getElementsByClassName("display")[0];
@@ -143,38 +143,25 @@
 // 	})
 
 
-//Attempt 2 -refactoring attempt
+// Attempt 2 -refactoring attempt  WORKS
 document.addEventListener('DOMContentLoaded',function(){
 var display = document.getElementsByClassName("display")[0];
-var number1;
-var number2;
+var number1=0;
+var number2=0;
 var result;
 var equals=document.getElementsByName("eq");
 var clear=document.getElementsByName("clear");
-var op1=document.getElementsByName("plus");
-var op2=document.getElementsByName("minus");
-var op3=document.getElementsByName("times");
-var op4=document.getElementsByName("div");
-var operation=[op1,op2,op3,op4];
+var operation2 = document.getElementsByClassName("operator");
+
 var finalop;
-var num1=document.getElementsByName("one");
-var num2=document.getElementsByName("two");
-var num3=document.getElementsByName("three");
-var num4=document.getElementsByName("four");
-var num5=document.getElementsByName("five");
-var num6=document.getElementsByName("six");
-var num7=document.getElementsByName("seven");
-var num8=document.getElementsByName("eight");
-var num9=document.getElementsByName("nine");
-var num0=document.getElementsByName("zero");
-var nums=[num1,num2,num3,num4,num5,num6,num7,num8,num9,num0];
+var nums = document.getElementsByClassName("number");
 assignAllNumButtons();
 assignAllOperationButtons();
 clear[0].addEventListener("click", function(){
 	display.value=null;
 })
 function assignAllOperationButtons(){
-	for (var i=0;i<operation.length;i++){
+	for (var i=0;i<operation2.length;i++){
 		assignOperators(i);
 	}
 }
@@ -184,15 +171,15 @@ for (var i=0;i<nums.length;i++){
 }
 }
 function assignNumButton(x) {
-	nums[x][0].addEventListener("click",function(){
-		display.value+=nums[x][0].value;
+	nums[x].addEventListener("click",function(){
+		display.value+=nums[x].value;
 	})
 }
 function assignOperators(x){
-	operation[x][0].addEventListener("click", function(){
+	operation2[x].addEventListener("click", function(){
 		number1=parseInt(display.value);
 		display.value=null;
-		finalop= operation[x][0].value;
+		finalop= operation2[x].value;
 	})
 }
 equals[0].addEventListener("click",function(){
