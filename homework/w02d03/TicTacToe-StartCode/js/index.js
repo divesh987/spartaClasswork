@@ -12,28 +12,19 @@ var player1="X";
 //player2 variable
 var player2="O";
 var counter =0;
+var clickCounter=0;
 //display player choice
 var xValues=[];
 var oValues=[];
 var display = $(".playerTurn");
 var boxes = $("td");
 
-function displayPlayerChoice(){
-
-	// var table= 
-}
 assignBoxButtons();
 function assignBoxButtons(){
-
-//boxes.html("X");
-// if ($(display.html())=="It is O's turn" || $(display.html())=="It is X's turn"){
     $(boxes).each(function(index,box){
     	onClick(box);
 
 }) 
-// }else{
-
-//     }
 }
 function onClick(box1){
          $(box1).one('click', function(){
@@ -42,6 +33,8 @@ function onClick(box1){
          	$(box1).addClass(player1);
          	$(display.html("It is O's turn"));
          	counter++;
+         	clickCounter++;
+         	console.log(clickCounter);
          	// arrayA(parseInt($(box1).attr("data-num")));
          	 xValues.push(parseInt($(box1).attr("data-num")));
          	  compareAll(xValues,player1);
@@ -50,11 +43,13 @@ function onClick(box1){
          	$(box1).addClass(player2);
          	$(display.html("It is X's turn"));
          	counter++;
+         	clickCounter++;
+         	console.log(clickCounter);
          	// arrayA(parseInt($(box1).attr("data-num")));
          	 oValues.push(parseInt($(box1).attr("data-num")))
          	 compareAll(oValues,player2);
 
-              console.log($(box1).attr("data-num"))
+              // console.log($(box1).attr("data-num"))
          }
           console.log("X Values:+",xValues);
           console.log("O Values:+",oValues);
@@ -71,6 +66,10 @@ win=winningPossibilites[y].every(function(element, index) {
 });
 if(win==true){
 	$(display.html(winner +" wins"));
+		 		for (var i=boxes.length-1;i>=0;i--){
+	 			var $box=$(boxes[i]);
+	 			$box.off("click");
+	 		}
 	
 }
 }
@@ -89,10 +88,15 @@ $(clear.on("click",function(){
 }))
 
 function tieResult(){
-	if($(isEmpty(boxes))==false){
-		$(display.html("Tie Game"))
+	if (clickCounter==9 && (display.html() =="X wins" || display.html() =="O wins") ){
+		display.html("Tie Game");
+
 	}
+	
 }
+tieResult();
+
+
 
 })
 
