@@ -29,6 +29,16 @@ def bmi h,w
 	
 end
 
+def again
+	puts "Do you wish to do another calculation?\n Y: Yes"
+	choice = gets.chomp.upcase
+	if choice == 'Y' then 
+		calculator
+	else
+		puts 'End' 
+	end 
+end
+
 def bmi_result bmi
 
 	if bmi < 16 then 
@@ -66,84 +76,97 @@ def trip_cost d,fe,cpg,s
 
 end 
 
+def calculator 
+	puts "Menu\n A: Basic Calculator\n B: Advanced Calculator\n C: BMI Calculator\n D: Trip Calculator"
+	choice = gets.chomp.upcase
 
-puts "Menu\n A: Basic Calculator\n B: Advanced Calculator\n C: BMI Calculator\n D: Trip Calculator"
-choice = gets.chomp.upcase
-
-if choice.eql? "A" then
-	puts "Basic Calculator:\n Enter First Number: "
-	number1 = gets.chomp.to_f
-	puts "Enter operation: \n +, - , *, /:"
-	operation = gets.chomp
-	puts "Enter Second number: "
-	number2 =gets.chomp.to_f
-
-case operation 
-
-when "+"
-	result = add_numbers number1, number2  
-	puts "The result is #{result}"
-when "-"
-	result = subtract_numbers number1, number2
-	puts "The result is #{result}"
-when "*"
-	result = multiply_numbers number1, number2
-	puts "The result is #{result}"
-when "/"
-	result = divide_numbers number1, number2
-	puts "The result is #{result}"
-else 
-	puts "Not a valid input! "
-end 
-
-elsif choice.eql? "B" then 
-	puts "Advanced Calculator: \n PWR: Power \n SQ: Square Root"
-	choiceb = gets.chomp.upcase
-	case choiceb
-
-	when "PWR"
-		puts "Enter First Number: "
+	if choice.eql? "A" then
+		puts "Basic Calculator:\n Enter First Number: "
 		number1 = gets.chomp.to_f
-		puts "Enter Exponential: "
+		puts "Enter operation: \n +, - , *, /:"
+		operation = gets.chomp
+		puts "Enter Second number: "
 		number2 =gets.chomp.to_f
-		result = power number1, number2
+
+	case operation 
+
+	when "+"
+		result = add_numbers number1, number2  
 		puts "The result is #{result}"
-
-	when "SQ"
-		puts "Enter number you wish to find the square root of: "
-		number1 = gets.chomp.to_f
-		result = square number1
+		again
+	when "-"
+		result = subtract_numbers number1, number2
 		puts "The result is #{result}"
+		again
+	when "*"
+		result = multiply_numbers number1, number2
+		puts "The result is #{result}"
+		again
+	when "/"
+		result = divide_numbers number1, number2
+		puts "The result is #{result}"
+		again
+	else 
+		puts "Not a valid input! "
+		calculator
+	end 
 
+	elsif choice.eql? "B" then 
+		puts "Advanced Calculator: \n PWR: Power \n SQ: Square Root"
+		choiceb = gets.chomp.upcase
+		case choiceb
+
+		when "PWR"
+			puts "Enter First Number: "
+			number1 = gets.chomp.to_f
+			puts "Enter Exponential: "
+			number2 =gets.chomp.to_f
+			result = power number1, number2
+			puts "The result is #{result}"
+			again
+
+		when "SQ"
+			puts "Enter number you wish to find the square root of: "
+			number1 = gets.chomp.to_f
+			result = square number1
+			puts "The result is #{result}"
+			again
+		else 
+			puts "Not a valid input"
+			calculator
+	end 
+
+	elsif choice.eql? "C" then 
+		puts "BMI Calculator:\n Enter your height in Meters: "
+		height = gets.chomp.to_f
+		puts "Enter your weight in Kgs: "
+		weight = gets.chomp.to_f
+		bmi_value = bmi height, weight
+		bmi_string = bmi_result bmi_value
+		result= "Your BMI is #{bmi_value.round(2)},#{bmi_string}"
+		puts result;
+		again
+
+
+	elsif choice.eql? "D" then 
+		puts "Trip Calculator: \n Enter the distance of the trip in miles:"
+		distance = gets.chomp.to_f
+		puts "Enter the fuel efficiency of the trip (mpg): "
+		fuel_efficiency = gets.chomp.to_f
+		puts "Enter the cost per gallon in pounds: "
+		cost_per_gallon = gets.chomp.to_f
+		puts "Enter the speed (MPH): "
+		speed= gets.chomp.to_f
+
+		time = trip_time distance, speed
+		cost = trip_cost distance, fuel_efficiency, cost_per_gallon, speed
+		result = "Your trip will take #{time.round(2)} hours and cost £#{cost.round(2)}"
+		puts result 
+		again
+
+	end 
 end 
-
-elsif choice.eql? "C" then 
-	puts "BMI Calculator:\n Enter your height in Meters: "
-	height = gets.chomp.to_f
-	puts "Enter your weight in Kgs: "
-	weight = gets.chomp.to_f
-	bmi_value = bmi height, weight
-	bmi_string = bmi_result bmi_value
-	result= "Your BMI is #{bmi_value},#{bmi_string}"
-	puts result;
-
-
-elsif choice.eql? "D" then 
-	puts "Trip Calculator: \n Enter the distance of the trip in miles:"
-	distance = gets.chomp.to_f
-	puts "Enter the fuel efficiency of the trip (mpg): "
-	fuel_efficiency = gets.chomp.to_f
-	puts "Enter the cost per gallon in pounds: "
-	cost_per_gallon = gets.chomp.to_f
-	puts "Enter the speed (MPH): "
-	speed= gets.chomp.to_f
-
-	time = trip_time distance, speed
-	cost = trip_cost distance, fuel_efficiency, cost_per_gallon, speed
-	result = "Your trip will take #{time.round(2)} hours and cost £#{cost.round(2)}"
-	puts result 
-
-end 
+calculator
 
 
 
