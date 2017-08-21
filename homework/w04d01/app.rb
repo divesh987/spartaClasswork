@@ -1,7 +1,5 @@
 puts "Welcome to my Ruby Calculator"
 
-
-
 def add_numbers num1,num2 
 	num1 + num2
 end
@@ -56,7 +54,14 @@ def trip_time d,s
 	d/s
 end
 
-def trip_cost d,fe,cpg 
+def trip_cost d,fe,cpg,s
+
+	if s > 60 && s < 270 then 
+		decrementer = (s-60)*2
+		if fe > decrementer then 
+			fe-=decrementer
+		end
+	end 
 	(d/fe) * cpg 
 
 end 
@@ -134,8 +139,8 @@ elsif choice.eql? "D" then
 	speed= gets.chomp.to_f
 
 	time = trip_time distance, speed
-	cost = trip_cost distance, fuel_efficiency, cost_per_gallon
-	result = "Your trip will take #{time} hours and cost £#{cost.round(2)}"
+	cost = trip_cost distance, fuel_efficiency, cost_per_gallon, speed
+	result = "Your trip will take #{time.round(2)} hours and cost £#{cost.round(2)}"
 	puts result 
 
 end 
