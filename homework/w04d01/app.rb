@@ -1,4 +1,4 @@
-puts "Welcome to my Ruby Calculator"
+puts "Welcome to my Ruby Calculator\n ** Created by Divesh Mavji **"
 
 def add_numbers num1,num2 
 	num1 + num2
