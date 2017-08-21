@@ -16,7 +16,6 @@ var display = document.getElementsByClassName("display")[0];
 
 //variable for first number in calculation 
 var first_number =null;
-
 //variable for second number in calculation 
 var second_number =null;
 //variable for operator clicked 
@@ -46,8 +45,6 @@ function setupEventListeners(){
 
 }
 
-
-
 //Functions for calculator
 
 //add
@@ -69,13 +66,10 @@ function multiply(firstNumber,secondNumber){
 function divide(firstNumber,secondNumber){
 	return firstNumber / secondNumber;
 }
-
-
 //--------------------------------------------------
 
 //calculation
 function calculation(firstNumber,operator,secondNumber) {
-	console.log(firstNumber, operator,secondNumber);
 	switch(operator){
 		case "+":
 			display.value=add(first_number,second_number);
@@ -92,10 +86,6 @@ function calculation(firstNumber,operator,secondNumber) {
 	}
 
 }
-
-
-
-
 //--------------------------------------------------
 
 //clear the calculator
@@ -104,38 +94,28 @@ function clearCalc(){
 	second_number=null;
 	operator= null;
 	display.value="";
-	console.log(first_number,second_number,operator, "clear");
 
 }
-
-
 //display and store the buttons clicked
 function updateAndDisplayNumber(){
-	console.log("number ", this.value)
 	var btn = this.value;
 	display.value=btn;
 	if (first_number===null){
 		first_number=parseFloat(btn);
-		console.log(first_number);
 
 	} else {
 		second_number=parseFloat(btn);
-		console.log(second_number);
-	}
+			}
 
 }
 
 //display and store the operator 
-
 function updateAndDisplayOperator(){
-	console.log("operator", this.value)
 	operator= this.value;
 	display.value=operator;
 
 }
 
-
 setupEventListeners();
-console.log(divide(1,2));
 
 
