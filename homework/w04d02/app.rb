@@ -15,3 +15,8 @@ end
 get "/games/:id" do
 	"SHOW GAMES"
 end 
+
+#Route - CREATE
+post "/games" do 
+	"CREATE"
+end 
