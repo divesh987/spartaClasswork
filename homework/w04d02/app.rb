@@ -5,3 +5,8 @@ require "sinatra/reloader" if development?
 get "/games" do 
 	"GAMES INDEX"
 end
+
+# Route - NEW
+get "/games/new" do 
+	"NEW GAME"
+end 
