@@ -1,28 +1,3 @@
-puts "Welcome to the text Adventure Game created by Divesh, Enter your name to begin: "
-name = gets.chomp
-
-puts "Welcome #{name} , Congratulations on your promotion to a rank B ninja, I, 
-	Master Slasher will now test your survival
-	skills, Here is a compass and some food, off you go !"
-
-puts "In the forest, there are four paths:  N, W, E, S. Choose a path to begin: "
-choice = gets.chomp.upcase;
-
-if choice == "N" then 
-choice_north
-
-elsif choice == "W" then 
-	"You fall into a deep pit and cannot seem to find a way to get up, You wished you noticed it earlier
-	but now it is too late. After several agonising days you die of starvation. GAME OVER!!"
-
-elsif choice == "S" then 
-
-elsif choice == "E" then 
-
-else
-	puts "invalid input"
-end 
-
 
 def choice_north 
 		puts "You are now in front of another ninja, He is a rank C ninja and needs your help to 
@@ -42,6 +17,35 @@ def choice_north
 	end 
 
 end 
+
+
+
+puts "Welcome to the text Adventure Game created by Divesh, Enter your name to begin: "
+name = gets.chomp
+
+puts "Welcome #{name} , Congratulations on your promotion to a rank B ninja, I, 
+	Master Slasher will now test your survival
+	skills, Here is a compass and some food, off you go !"
+
+puts "In the forest, there are four paths:  N, W, E, S. Choose a path to begin: "
+choice = gets.chomp.upcase;
+
+if choice == "N" then 
+	choice_north
+
+elsif choice == "W" then 
+	puts "You fall into a deep pit and cannot seem to find a way to get up, You wished you noticed it earlier
+	but now it is too late. After several agonising days you die of starvation. GAME OVER!!"
+
+elsif choice == "S" then 
+
+elsif choice == "E" then 
+
+else
+	puts "invalid input"
+end 
+
+
 
 		
 

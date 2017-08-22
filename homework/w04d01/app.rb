@@ -26,7 +26,6 @@ end
 
 def bmi h,w
 	(w/(h**2))
-	
 end
 
 def again

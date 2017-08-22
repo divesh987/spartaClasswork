@@ -19,6 +19,10 @@ var oValues=[];
 var display = $(".playerTurn");
 var boxes = $("td");
 
+function displayPlayerChoice(){
+
+	// var table= 
+}
 assignBoxButtons();
 function assignBoxButtons(){
     $(boxes).each(function(index,box){
@@ -86,6 +90,7 @@ $(clear.on("click",function(){
 
 	// assignBoxButtons();
 }))
+
 
 function tieResult(){
 	if (clickCounter==9 && (display.html() =="X wins" || display.html() =="O wins") ){

@@ -16,7 +16,6 @@ switch(choice) {
 	} else if (cRandom > 0.66 && cRandom<=1){
 		cChoice= "Paper";
 	}
-
 	var pChoice = prompt("Choose Between Rock, Paper and Scissors: ");
 	switch(pChoice.toLowerCase()){
 		case "rock":
