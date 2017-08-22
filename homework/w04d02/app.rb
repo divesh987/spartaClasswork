@@ -24,4 +24,9 @@ end
 #Route - EDIT
 get "/games/:id/edit" do
 	"EDIT GAME"
-end  
+end
+
+#Route - UPDATE 
+put "/games/:id" do
+	"UPDATE GAME"
+end   
