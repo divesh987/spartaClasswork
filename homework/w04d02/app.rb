@@ -10,3 +10,8 @@ end
 get "/games/new" do 
 	"NEW GAME"
 end 
+
+# Route - SHOW
+get "/games/:id" do
+	"SHOW GAMES"
+end 
