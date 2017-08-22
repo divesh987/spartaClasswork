@@ -18,5 +18,10 @@ end
 
 #Route - CREATE
 post "/games" do 
-	"CREATE"
+	"CREATE GAME"
 end 
+
+#Route - EDIT
+get "/games/:id/edit" do
+	"EDIT GAME"
+end  
