@@ -29,4 +29,9 @@ end
 #Route - UPDATE 
 put "/games/:id" do
 	"UPDATE GAME"
+end 
+
+#Route - DELETE
+delete "/games/:id" do 
+	"DELETE GAME"
 end   
