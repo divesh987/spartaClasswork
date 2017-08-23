@@ -8,7 +8,7 @@ class PostsController < Sinatra::Base
 	end 
 
 	get "/" do 
-		"Hello"
+
 	end
 end 
 
