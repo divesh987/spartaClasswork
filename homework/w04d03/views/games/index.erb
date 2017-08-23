@@ -1,2 +1,8 @@
-<li>Game 1</li>
-<li>Game 2</li>
+<% @games.each do |game| %>
+	<div>
+		<h3>
+			<p><%= game[:title]%></p>
+			<p><%= game[:review]%></p>
+		</h3>
+	</div>
+<% end %>
