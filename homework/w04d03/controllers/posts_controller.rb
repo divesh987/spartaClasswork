@@ -33,6 +33,13 @@ class PostsController < Sinatra::Base
 	end 
 
 	post "/" do
+		id = $games.length
+		puts params
+		# new_review = {
+		# 	id: id
+		# 	title: params[:title]
+
+		# }
 		redirect "/"
 	end 
 
