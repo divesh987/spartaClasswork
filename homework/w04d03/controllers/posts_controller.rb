@@ -15,6 +15,26 @@ class PostsController < Sinatra::Base
 		title: "GTA 5",
 		review: "This Game is awesome !! You can play as three characters "
 
+	},
+	{
+		id: 2,
+		title: "The Last of us",
+		review:"Best game ever!"
+	},
+	{
+		id: 3,
+		title: "Hitman",
+		review: "Awesome assasination game"
+	},
+	{
+		id: 4,
+		title: "Fifa 17",
+		review: "Boring",
+	},
+	{
+		id: 5,
+		title: "UFC 2",
+		review: "nice combat"
 	}]
 
 	configure :development do 
