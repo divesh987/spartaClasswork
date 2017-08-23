@@ -1,8 +1,10 @@
 <% @games.each do |game| %>
 	<div>
 		<h3>
-			<p><%= game[:title]%></p>
-			<p><%= game[:review]%></p>
+			<a href="/<%= game[:id]%>"><%= game[:title]%></a>
+
 		</h3>
+			<p><%= game[:review]%></p>
+		
 	</div>
-<% end %>
+<% end %>					
