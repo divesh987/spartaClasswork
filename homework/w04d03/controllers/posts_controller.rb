@@ -39,7 +39,7 @@ class PostsController < Sinatra::Base
 			title: params[:title],
 			review: params[:review]
 		}
-		puts new_review
+		$games.push new_review
 		redirect "/"
 	end 
 
