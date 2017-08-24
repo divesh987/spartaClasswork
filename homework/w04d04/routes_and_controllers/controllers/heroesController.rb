@@ -14,10 +14,13 @@ class Heroes < Sinatra::Base
 		register Sinatra::Reloader
 	end
 
-	get "/" do 
-		@heroes=$heroes
+	get "/" do
+		@heroes = $heroes 
 		erb :"heroes/index"
 
+	end 
+	get "/new" do 
+		"NEW"
 	end 
 
 

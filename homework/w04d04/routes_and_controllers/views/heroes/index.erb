@@ -1,5 +1,5 @@
 <h1>Heroes list</h1>
-<% @heroes.each |hero| %>
-<div><%= hero.title %></div>
-<div><%= hero.description %></div>
+<% @heroes.each do |hero| %>
+<h3><%= hero.title %></h3>
+<p><%= hero.description %></p>
 <% end %>

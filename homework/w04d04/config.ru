@@ -1,6 +1,6 @@
 require "sinatra"
 require "sinatra/reloader" if development?
-require_relative "./routes_and_controllers/heroesController.rb"
+require_relative "./routes_and_controllers/controllers/heroesController.rb"
 
 use Rack::Reloader
 
