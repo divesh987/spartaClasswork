@@ -42,5 +42,10 @@ class Heroes < Sinatra::Base
 		erb :"heroes/show"
 	end 
 
+	get	"/:id/edit" do
+		
+		erb :"heroes/edit"
+	end
+
 
 end
