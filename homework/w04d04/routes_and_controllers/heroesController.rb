@@ -1,0 +1,24 @@
+require_relative "hero.rb"
+class Heroes < Sinatra::Base
+	$heroes =[]
+	$heroes.push Hero.new(0,"Batman","Caped Crusader")
+	$heroes.push Hero.new(1,"Spiderman","Web Slinger")
+	$heroes.push Hero.new(2,"Superman","Super")
+	#sets root as the parent 
+	set :root, File.join(File.dirname(__FILE__),"..")
+
+	#sets the view directory correctly 
+	set :view, Proc.new { File.join(root, "views") }
+
+	configure :development do
+		register Sinatra::Reloader
+	end
+
+	get "/" do 
+		@heroes=$heroes
+		erb :"heroes/index"
+
+	end 
+
+
+end
