@@ -1,0 +1,36 @@
+#header {
+	text-align: center;
+}
+
+#reviewBlock{
+	border-bottom: 2px solid grey;
+}
+h1 {
+	text-align: center;
+	color: white;
+}
+h2 {
+	color: #00ffff;
+}
+nav a{
+	text-align: center;
+	margin: 0 15%;
+}
+
+#nav {
+	border-radius: 20px;
+	
+}
+
+body {
+	background-image: url("http://www.desktopwallpaperhd.net/wallpapers/14/3/wallpaper-joystick-retro-products-images-share-shirt-149299.jpg");
+}
+p{
+	color: white;
+	font-size: 20px;
+}
+form {
+	color: white;
+	font-size: 20px;
+	font-family: comic-sans	
+}
