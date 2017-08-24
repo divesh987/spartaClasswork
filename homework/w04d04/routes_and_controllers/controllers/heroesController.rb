@@ -19,8 +19,14 @@ class Heroes < Sinatra::Base
 		erb :"heroes/index"
 
 	end 
-	get "/new" do 
-		"NEW"
+	get "/new" do
+		"New"
+	end 
+
+	get "/:id" do
+		id = params[:id].to_i
+		@hero = $heroes[id]
+		erb :"heroes/show"
 	end 
 
 
