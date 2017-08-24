@@ -62,6 +62,13 @@ class Heroes < Sinatra::Base
 		erb :"heroes/edit"
 	end
 
+	delete "/:id" do
+		id = params[:id].to_i
+		$heroes.delete_at(id)
+		redirect "/"
+
+	end
+
 
 
 end

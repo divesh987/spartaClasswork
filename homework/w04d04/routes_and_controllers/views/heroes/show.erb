@@ -1,3 +1,7 @@
 <h3><%= @hero.title %></h3>
 <p><%= @hero.description%></p>
-<a href="/<%=@hero.id%>/edit">Edit</a>
+<!-- <a href="/<%=@hero.id%>/edit">Edit</a> -->
+<form action="/<%= @hero.id %>" method="POST">
+	<input type="hidden" name="_method" value="DELETE">
+	<input type="submit" value="DELETE">
+</form>
