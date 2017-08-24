@@ -1,6 +1,6 @@
 require_relative "hero.rb"
 class Heroes < Sinatra::Base
-	$heroes =[]
+	$heroes =[]	
 	$heroes.push Hero.new(0,"Batman","Caped Crusader")
 	$heroes.push Hero.new(1,"Spiderman","Web Slinger")
 	$heroes.push Hero.new(2,"Superman","Super")
@@ -19,7 +19,12 @@ class Heroes < Sinatra::Base
 		erb :"heroes/index"
 
 	end 
-	get "/new" do 
+	get "/new" do
+		@hero  = {
+			id: "",
+			title: "",
+			description: ""
+		} 
 		erb :"heroes/new"
 	end
 	post "/" do
@@ -42,10 +47,21 @@ class Heroes < Sinatra::Base
 		erb :"heroes/show"
 	end 
 
+	put "/:id" do 
+		id= params[:id].to_i
+		hero = $heroes[id]
+		hero.title = params[:title]
+		hero.description = params[:description]
+		$heroes[id]=hero
+		redirect "/"
+	end
+
 	get	"/:id/edit" do
-		
+		id= params[:id].to_i	
+		@hero = $heroes[id]
 		erb :"heroes/edit"
 	end
+
 
 
 end
