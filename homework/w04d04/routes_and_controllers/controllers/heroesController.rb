@@ -19,8 +19,21 @@ class Heroes < Sinatra::Base
 		erb :"heroes/index"
 
 	end 
-	get "/new" do
-		"New"
+	get "/new" do 
+		erb :"heroes/new"
+	end
+	post "/" do
+		id = $heroes.length
+		# new_hero={
+		# 	id: id,
+		# 	title: params[:title],
+		# 	description: params[:description]
+		# }
+		# $heroes.push Hero.new (new_hero)
+
+		$heroes.push Hero.new(id,params[:title],params[:description])
+		redirect "/"
+
 	end 
 
 	get "/:id" do
