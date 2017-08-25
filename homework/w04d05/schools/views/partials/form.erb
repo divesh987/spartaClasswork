@@ -1,4 +1,7 @@
-<form action="/" method="POST">
+<form action="/<%= @student.student_id %>" method="POST">
+<% if(@student.student_id != "") %>
+<input type="hidden" name="_method" value="PUT">
+ <% end %>
 <label>Student First Name: </label>
 <input type="text" name="first_name" placeholder="Enter first name">
 <label>Student Last Name: </label>

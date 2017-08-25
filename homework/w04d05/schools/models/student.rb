@@ -42,7 +42,13 @@ class Student
 
 	def save 
 		conn = Student.open_connection
-		sql = "INSERT INTO students (first_name, last_name, age, gender, email, num) VALUES (#{self.first_name}, #{self.last_name}, #{self.age}, #{self.gender}, #{self.email}, #{self.num})"
-		conn.exec(sql)
-	end 
+
+		if (!self.student_id)
+			sql = "INSERT INTO student (first_name, last_name, age, gender, email, num) 
+	VALUES (#{self.first_name}, #{self.last_name}, #{self.age}, #{self.gender}, #{self.email},#{self.num});"
+		else
+		sql = "UPDATE student SET first_name=#{self.first_name}, last_name=#{self.last_name}, age=#{self.age}, gender=#{self.gender}, email=#{self.email}, num=#{self.num} WHERE student_id=#{self.student_id}"
+		end
+	conn.exec(sql)
+	end
 end
