@@ -20,7 +20,7 @@ class Student
 
 	def self.all 
 		conn = self.open_connection
-		sql = "SELECT student_id, first_name, last_name, age, gender, email, num FROM student ORDER BY student_id"
+		sql = "SELECT * FROM student ORDER BY student_id"
 		results = conn.exec(sql)
 
 		students = results.map do |result|
@@ -30,19 +30,18 @@ class Student
 		students
 	end 
 
-	def self.find student_id
+	def self.find id 
 		conn = self.open_connection
-		sql = "SELECT student_id, first_name, last_name, age, gender, email, num FROM student WHERE student_id = #{self.student_id} LIMIT 1"
+		sql = "SELECT * FROM student WHERE student_id = #{id} LIMIT 1"
 		students = conn.exec(sql)
 
 		student = self.hydrate students[0]
 
-		student 
-
-	end 
+		student
+	end
 
 	def save 
-		conn = Post.open_connection
+		conn = Student.open_connection
 		sql = "INSERT INTO students (first_name, last_name, age, gender, email, num) VALUES (#{self.first_name}, #{self.last_name}, #{self.age}, #{self.gender}, #{self.email}, #{self.num})"
 		conn.exec(sql)
 	end 
