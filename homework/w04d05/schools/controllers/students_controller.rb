@@ -8,6 +8,6 @@ class StudentsController < Sinatra::Base
 	end
 
 	get "/" do 
-		"INDEX"
+		
 	end 
 end

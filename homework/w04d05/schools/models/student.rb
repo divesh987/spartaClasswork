@@ -17,4 +17,16 @@ class Student
 
 		student
 	end 
+
+	def self.all 
+		conn = self.open_connection
+		sql = "SELECT * FROM student ORDER BY student_id"
+		results = conn.exec(sql)
+
+		students = results.map do |result|
+			self.hydrate result
+		end 
+
+		students
+	end 
 end
