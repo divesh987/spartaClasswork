@@ -8,6 +8,6 @@ class StudentsController < Sinatra::Base
 	end
 
 	get "/" do 
-		
+		erb :"students/index"
 	end 
 end
