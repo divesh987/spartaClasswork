@@ -12,3 +12,11 @@ CREATE TABLE student(
 
 INSERT INTO student (first_name, last_name, age, gender, email, num) 
 VALUES ('Bruce', 'Wayne', '15', 'Male', 'iamnotbatman@hotmail.com','07802378923');
+INSERT INTO student (first_name, last_name, age, gender, email, num) 
+VALUES ('Clark', 'Kent', '17', 'Male', 'kryptonium@gmail.com','07648920483');
+INSERT INTO student (first_name, last_name, age, gender, email, num) 
+VALUES ('Scarlett', 'Johannson', '19', 'Female', 'blackwidow@hotmail.com','07249463728');
+INSERT INTO student (first_name, last_name, age, gender, email, num) 
+VALUES ('Selena', 'Gomez', '24', 'Female', 'thewizard@hotmail.com','07802348393');
+INSERT INTO student (first_name, last_name, age, gender, email, num) 
+VALUES ('Harry', 'Potter', '20', 'Male', 'ibeatthedarklord@hotmail.com','07936574832');
