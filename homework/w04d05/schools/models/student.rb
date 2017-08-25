@@ -20,7 +20,7 @@ class Student
 
 	def self.all 
 		conn = self.open_connection
-		sql = "SELECT * FROM student ORDER BY student_id"
+		sql = "SELECT student_id, first_name, last_name, age, gender, email, num FROM student ORDER BY student_id"
 		results = conn.exec(sql)
 
 		students = results.map do |result|
