@@ -12,4 +12,9 @@ class StudentsController < Sinatra::Base
 		@students = Student.all
 		erb :"students/index"
 	end 
+
+	get "/:id" do 
+		id = params[:id]
+		
+	end 
 end
