@@ -29,6 +29,12 @@ class StudentsController < Sinatra::Base
 		erb :"students/show"
 	end 
 
+	get "/:id/edit" do
+	id = params[:id].to_i
+    @student = Student.find id
+	erb :"students/edit"
+	end
+
 	post "/" do
 		@student = Student.new
 		@student.first_name = params[:first_name]
@@ -42,6 +48,12 @@ class StudentsController < Sinatra::Base
 
 		redirect "/"
 
+	end
+
+	delete "/:id" do
+		id = params[:id].to_i
+    	Student.destroy id
+    	redirect "/"
 	end
 
 

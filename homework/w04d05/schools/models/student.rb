@@ -49,6 +49,12 @@ class Student
 		else
 		sql = "UPDATE student SET first_name=#{self.first_name}, last_name=#{self.last_name}, age=#{self.age}, gender=#{self.gender}, email=#{self.email}, num=#{self.num} WHERE student_id=#{self.student_id}"
 		end
-	conn.exec(sql)
+		conn.exec(sql)
 	end
+
+	def self.destroy id 
+		conn = self.open_connection
+		sql = "DELETE FROM student WHERE id = #{id}"
+		conn.exec(sql)
+	end 
 end

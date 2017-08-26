@@ -3,16 +3,16 @@
 <input type="hidden" name="_method" value="PUT">
  <% end %>
 <label>Student First Name: </label>
-<input type="text" name="first_name" placeholder="Enter first name">
+<input type="text" name="first_name" placeholder="Enter first name" value="<%= @student.first_name%>">
 <label>Student Last Name: </label>
-<input type="text" name="last_name" placeholder="Enter last name">
+<input type="text" name="last_name" placeholder="Enter last name" value="<%= @student.last_name%>">
 <label>Student Age: </label>
-<input type="text" name="age" placeholder="Enter age">
+<input type="text" name="age" placeholder="Enter age" value="<%= @student.age%>">
 <label>Student Gender: </label>
-<input type="text" name="gender" placeholder="Enter gender">
+<input type="text" name="gender" placeholder="Enter gender" value="<%= @student.gender%>">
 <label>Student Email: </label>
-<input type="text" name="email" placeholder="Enter Email">
+<input type="text" name="email" placeholder="Enter Email" value="<%= @student.email%>">
 <label>Student Number: </label>
-<input type="text" name="num" placeholder="Enter number">
+<input type="text" name="num" placeholder="Enter number" value="<%= @student.num%>">
 <input type="submit" value="Save">
 </form>

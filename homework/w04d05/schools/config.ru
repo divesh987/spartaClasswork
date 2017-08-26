@@ -6,7 +6,7 @@ require_relative "./controllers/students_controller.rb"
 
 
 
-
+use Rack::MethodOverride
 
 run StudentsController
 
