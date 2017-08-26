@@ -30,9 +30,9 @@ class StudentsController < Sinatra::Base
 	end 
 
 	get "/:id/edit" do
-	id = params[:id].to_i
-    @student = Student.find id
-	erb :"students/edit"
+		id = params[:id].to_i
+	    @student = Student.find id
+		erb :"students/edit"
 	end
 
 	post "/" do
