@@ -54,7 +54,7 @@ class Student
 
 	def self.destroy id 
 		conn = self.open_connection
-		sql = "DELETE FROM student WHERE id = #{id}"
+		sql = "DELETE FROM student WHERE student_id = #{id}"
 		conn.exec(sql)
 	end 
 end
