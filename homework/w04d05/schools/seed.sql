@@ -1,4 +1,5 @@
 DROP TABLE IF EXISTS student;
+DROP TABLE IF EXISTS trainer;
 
 CREATE TABLE student(
 	student_id SERIAL PRIMARY KEY,
@@ -8,6 +9,13 @@ CREATE TABLE student(
 	gender VARCHAR(6),
 	email TEXT, 
 	num VARCHAR(11)
+);
+CREATE TABLE trainer(
+	trainer_id SERIAL PRIMARY KEY,
+	first_name VARCHAR(20),
+	last_name VARCHAR(30),
+	gender VARCHAR(6),
+	course VARCHAR(12)
 );
 
 INSERT INTO student (first_name, last_name, age, gender, email, num) 
@@ -20,3 +28,7 @@ INSERT INTO student (first_name, last_name, age, gender, email, num)
 VALUES ('Selena', 'Gomez', '24', 'Female', 'thewizard@hotmail.com','07802348393');
 INSERT INTO student (first_name, last_name, age, gender, email, num) 
 VALUES ('Harry', 'Potter', '20', 'Male', 'ibeatthedarklord@hotmail.com','07936574832');
+
+INSERT INTO trainer (first_name, last_name, gender, course) 
+VALUES ('Tomas', 'Paul', 'Male', 'Maths');
+

@@ -1,4 +1,4 @@
-class StudentsController < Sinatra::Base
+class SchoolController < Sinatra::Base
 	set :root, File.join(File.dirname(__FILE__),'..')
 
 	set :views, Proc.new {File.join(root, "views")}
@@ -12,6 +12,24 @@ class StudentsController < Sinatra::Base
 		@students = Student.all
 		erb :"students/index"
 	end 
+	get "/trainers" do
+		@trainers = Trainer.all
+		erb :"trainers/index"
+	end
+	get "/trainers/new" do 
+		@trainer = Trainer.new
+		@trainer.trainer_id =""
+		@trainer.first_name = ""
+		@trainer.last_name = ""
+		@trainer.gender = ""
+		@trainer.course = ""
+		erb :"trainers/new"
+	end 
+	get "/trainers/:id" do 
+		id = params[:id].to_i
+		@trainer = Trainer.find id
+		erb :"trainers/show"
+	end 
 	get "/new" do
 		@student = Student.new
 		@student.student_id =""
@@ -23,6 +41,12 @@ class StudentsController < Sinatra::Base
 		@student.num = ""
 		erb :"students/new"
 	end
+
+	get "/trainers/:id/edit" do
+		id = params[:id].to_i
+	    @trainer = Trainer.find id
+		erb :"trainers/edit"
+	end 
 	get "/:id" do 
 		id = params[:id].to_i
 		@student = Student.find id
@@ -71,6 +95,4 @@ class StudentsController < Sinatra::Base
     	redirect "/"
 	end
 
-
-	
 end
