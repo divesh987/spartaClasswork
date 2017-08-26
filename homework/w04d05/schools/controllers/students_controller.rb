@@ -49,6 +49,21 @@ class StudentsController < Sinatra::Base
 		redirect "/"
 
 	end
+	put '/:id'  do
+	    id = params[:id].to_i
+	    student = Student.find id
+	    student.first_name = params[:first_name]
+		student.last_name = params[:last_name]
+		student.age = params[:age]
+		student.gender = params[:gender]
+		student.email = params[:email]
+		student.num = params[:num]
+	    student.save
+
+	    redirect "/"
+    
+	end
+    
 
 	delete "/:id" do
 		id = params[:id].to_i
