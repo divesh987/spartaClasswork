@@ -68,8 +68,11 @@ class SchoolController < Sinatra::Base
 	    trainer.save
 
 	    redirect "/trainers"
-    
-
+	end
+	delete "/trainers/:id" do
+		id = params[:id].to_i
+    	Trainer.destroy id
+    	redirect "/trainers"
 	end
 	get "/:id" do 
 		id = params[:id].to_i

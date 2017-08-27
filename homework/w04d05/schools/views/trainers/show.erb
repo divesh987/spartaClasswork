@@ -5,3 +5,7 @@
 	<li><%= @trainer.course%></li>
 </ul>
 <a href="/trainers/<%= @trainer.trainer_id %>/edit">edit</a>
+<form action="/trainers/<%= @trainer.trainer_id %>" method="POST">
+	<input type="hidden" name="_method" value="DELETE">
+	<input type="submit" value="DELETE">
+</form>
