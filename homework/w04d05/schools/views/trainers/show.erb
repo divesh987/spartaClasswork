@@ -7,8 +7,8 @@
 		<li class="list-group-item"><a href="/trainers/<%= @trainer.trainer_id %>/edit">Edit Trainer Info</a></li>
 		<li class="list-group-item">
 			<form action="/trainers/<%= @trainer.trainer_id %>" method="POST">
-			<input type="hidden" name="_method" value="DELETE">
-			<input type="submit" value="DELETE" class="btn-danger">
+				<input type="hidden" name="_method" value="DELETE">
+				<input type="submit" value="DELETE" class="btn-danger">
 			</form>
 		</li>
 	</ul>

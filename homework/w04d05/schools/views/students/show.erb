@@ -1,15 +1,23 @@
 <div class="container">
 	<h3><%= @student.first_name %></h3>
-	<ul>
-		<li><%= @student.last_name%></li>
-		<li><%= @student.age%></li>
-		<li><%= @student.gender%></li>
-		<li><%= @student.email%></li>
-		<li><%= @student.num%></li>
+	<ul class="list-group">
+		<li class="list-group-item">Last Name: <%= @student.last_name%></li>
+		<li class="list-group-item">Age: <%= @student.age%></li>
+		<li class="list-group-item">Gender: <%= @student.gender%></li>
+		<li class="list-group-item">Email: <%= @student.email%></li>
+		<li class="list-group-item">Tel: <%= @student.num%></li>
+		<li class="list-group-item">
+			<a href="/<%= @student.student_id %>/edit">Edit Student Info</a>
+		</li>
+		<li class="list-group-item">
+			<form action="/<%= @student.student_id %>" method="POST">
+				<input type="hidden" name="_method" value="DELETE">
+				<input type="submit" value="DELETE" class="btn-danger">
+			</form>
+		</li>
+
+
 	</ul>
-	<a href="/<%= @student.student_id %>/edit">edit</a>
-	<form action="/<%= @student.student_id %>" method="POST">
-		<input type="hidden" name="_method" value="DELETE">
-		<input type="submit" value="DELETE">
-	</form>
+	
+
 </div>
