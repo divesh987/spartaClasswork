@@ -58,7 +58,19 @@ class SchoolController < Sinatra::Base
 		redirect "/trainers"
 
 	end 
-	
+	put "/trainers/:id" do 
+		id = params[:id].to_i
+	    trainer = Trainer.find id
+	    trainer.first_name = params[:first_name]
+		trainer.last_name = params[:last_name]
+		trainer.gender = params[:gender]
+		trainer.course = params[:course]
+	    trainer.save
+
+	    redirect "/trainers"
+    
+
+	end
 	get "/:id" do 
 		id = params[:id].to_i
 		@student = Student.find id
