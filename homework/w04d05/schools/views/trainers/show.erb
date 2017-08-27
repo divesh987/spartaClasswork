@@ -1,11 +1,17 @@
-<h3><%= @trainer.first_name %></h3>
-<ul>
-	<li><%= @trainer.last_name%></li>
-	<li><%= @trainer.gender%></li>
-	<li><%= @trainer.course%></li>
-</ul>
-<a href="/trainers/<%= @trainer.trainer_id %>/edit">edit</a>
-<form action="/trainers/<%= @trainer.trainer_id %>" method="POST">
-	<input type="hidden" name="_method" value="DELETE">
-	<input type="submit" value="DELETE">
-</form>
+<div class="container">
+	<h3 class="page-header"><%= @trainer.first_name %></h3>
+	<ul class="list-group">
+		<li class="list-group-item">Last Name: <%= @trainer.last_name%></li>
+		<li class="list-group-item">Gender: <%= @trainer.gender%></li>
+		<li class="list-group-item">Course: <%= @trainer.course%></li>
+		<li class="list-group-item"><a href="/trainers/<%= @trainer.trainer_id %>/edit">Edit Trainer Info</a></li>
+		<li class="list-group-item">
+			<form action="/trainers/<%= @trainer.trainer_id %>" method="POST">
+			<input type="hidden" name="_method" value="DELETE">
+			<input type="submit" value="DELETE" class="btn-danger">
+			</form>
+		</li>
+	</ul>
+	
+	
+</div>

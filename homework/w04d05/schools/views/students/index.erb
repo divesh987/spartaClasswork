@@ -1,11 +1,18 @@
 <br>
-<% @students.each do |student| %>
-<a href="/<%= student.student_id %>"><%= student.first_name %></a>
-<ul>
-	<li><%= student.last_name%></li>
-	<li><%= student.age%></li>
-	<li><%= student.gender%></li>
-	<li><%= student.email%></li>
-	<li><%= student.num%></li>
-</ul>
-<% end %> 
+<div class="container">
+	<div class="row">
+		<% @students.each do |student| %>
+		<div class="col-md-6">
+			<a href="/<%= student.student_id %>"><%= student.first_name %></a>
+			<ul class="list-group">
+				<li class="list-group-item">Last Name:<%= student.last_name%></li>
+				<li class="list-group-item">Age: <%= student.age%></li>
+				<li class="list-group-item">Gender: <%= student.gender%></li>
+				<li class="list-group-item">Email: <%= student.email%></li>
+				<li class="list-group-item">Tel: <%= student.num%></li>
+			</ul>
+		</div>
+			<% end %> 
+		
+	</div>
+</div>

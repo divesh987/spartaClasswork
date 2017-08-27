@@ -3,7 +3,7 @@
 	<div class="row">
 		
 			<% @trainers.each do |trainer| %>
-			<div class="col-md-3">
+			<div class="col-md-6">
 				<a href="/trainers/<%= trainer.trainer_id %>"><%= trainer.first_name %></a>
 				<ul class="list-group">
 					<li class="list-group-item">Last Name: <%= trainer.last_name%></li>
