@@ -17,7 +17,12 @@
         </td>
       </tr>
       <tr>
-        <td>Description:<%= video.description %></td>
+
+      <div class="panel panel-default">
+        <div class="panel-body" id="desc">
+          <td>Description:<%= video.description %></td>
+        </div>
+      </div>
       </tr>
         <td><%= link_to 'Show', video %></td>
         <td><%= link_to 'Edit', edit_video_path(video) %></td>
