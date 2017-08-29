@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Video.destroy_all
+	Video.create([
+		{title: "Big bang Theory RPSLS", url: "https://www.youtube.com/watch?v=x5Q6-wMx-K8", description: "Rock paper scissors lizard spock"},
+		
+
+
+
+
+		])
