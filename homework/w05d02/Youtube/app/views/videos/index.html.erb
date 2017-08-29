@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>DynoTube</h1>
+<h1>Videos</h1>
 
 <table>
 
@@ -10,10 +10,12 @@
         <td> <h3> <%= video.title %> </h3></td>
       </tr>
       <tr>
-        <td><%= video_tag(video.url) %></td>
+        <td>
+          <iframe width="520" height="300" src="https://www.youtube.com/embed/<%=video.url%>" frameborder="0" allowfullscreen></iframe>
+        </td>
       </tr>
       <tr>
-        <td><%= video.description %></td>
+        <td>Description:<%= video.description %></td>
       </tr>
         <td><%= link_to 'Show', video %></td>
         <td><%= link_to 'Edit', edit_video_path(video) %></td>
