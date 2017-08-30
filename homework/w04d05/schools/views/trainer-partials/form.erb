@@ -1,0 +1,16 @@
+<div class="container">
+	<form action="/trainers/<%= @trainer.trainer_id %>" method="POST">
+	<% if(@trainer.trainer_id != "") %>
+	<input type="hidden" name="_method" value="PUT">
+	 <% end %>
+	<label>Trainer First Name: </label>
+	<input class="form-control" type="text" name="first_name" placeholder="Enter first name" value="<%= @trainer.first_name%>">
+	<label>Trainer Last Name: </label>
+	<input class="form-control" type="text" name="last_name" placeholder="Enter last name" value="<%= @trainer.last_name%>">
+	<label>Trainer Gender: </label>
+	<input class="form-control" type="text" name="gender" placeholder="Enter gender" value="<%= @trainer.gender%>">
+	<label>Trainer Course: </label>
+	<input class="form-control" type="text" name="course" placeholder="Enter Course" value="<%= @trainer.course%>">
+	<input type="submit" class="btn-primary btn-default" value="Save">
+	</form>
+</div>

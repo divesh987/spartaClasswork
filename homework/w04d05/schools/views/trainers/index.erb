@@ -1,0 +1,19 @@
+<div class="container">
+	<div class="page-header">
+		<h2>Trainer Index</h2>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<% @trainers.each do |trainer| %>
+		<div class="col-md-6">
+			<a href="/trainers/<%= trainer.trainer_id %>"><%= trainer.first_name %></a>
+			<ul class="list-group">
+				<li class="list-group-item">Last Name: <%= trainer.last_name%></li>
+				<li class="list-group-item">Gender: <%= trainer.gender%></li>
+				<li class="list-group-item">Course: <%= trainer.course%></li>
+			</ul>
+		</div>
+		<% end %> 
+	</div>
+</div>

@@ -1,0 +1,7 @@
+<h1>Heroes list</h1>
+<% @heroes.each do |hero| %>
+<h3>
+<a href="/<%=hero.id%>"><%= hero.title %></a>
+</h3>
+<p><%= hero.description %></p>
+<% end %>

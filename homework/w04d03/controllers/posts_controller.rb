@@ -69,6 +69,25 @@ class PostsController < Sinatra::Base
 		erb :"games/show"
 	end
 
+	put "/:id" do
+  	# data is gathered in the params object
+    id = params[:id].to_i
+      
+    # get the post object from our data store
+    post = $posts[id];
+      
+    # update the values of the object with data from the request
+    post[:title] = params[:title];
+    post[:content] = params[:content];
+      
+    # save the post back to our data store ( at the spot it came from this time )
+    $posts[id] = post;
+      
+    # redirect the user to a GET route. We'll go back to the INDEX.
+    redirect "/";
+
+	end
+
 end 
 
 

@@ -3,7 +3,7 @@ require "sinatra/reloader" if development?
 
 # Route - INDEX
 get "/games" do 
-	"GAMES INDEX"
+	"GAMES INDEX/ ROUTE"
 end
 
 # Route - NEW
@@ -13,7 +13,7 @@ end
 
 # Route - SHOW
 get "/games/:id" do
-	"SHOW GAMES"
+	"SHOW GAME"
 end 
 
 #Route - CREATE

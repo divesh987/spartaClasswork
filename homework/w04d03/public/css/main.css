@@ -18,12 +18,11 @@ nav a{
 }
 
 #nav {
-	border-radius: 20px;
-	
+	border-radius: 20px;	
 }
 
 body {
-	background-image: url("http://www.desktopwallpaperhd.net/wallpapers/14/3/wallpaper-joystick-retro-products-images-share-shirt-149299.jpg");
+	/*background-image: url("http://www.desktopwallpaperhd.net/wallpapers/14/3/wallpaper-joystick-retro-products-images-share-shirt-149299.jpg");*/
 }
 p{
 	color: white;

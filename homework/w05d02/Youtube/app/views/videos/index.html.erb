@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Videos</h1>
+
+<%= link_to 'New Video', new_video_path %>
+
+<table>
+
+  <tbody>
+    <% @videos.each do |video| %>
+      <tr>
+        <td> <h3> <%= video.title %> </h3></td>
+      </tr>
+      <tr>
+        <td>
+          <iframe width="520" height="300" src="https://www.youtube.com/embed/<%=video.url%>" frameborder="0" allowfullscreen></iframe>
+        </td>
+      </tr>
+      <tr>
+
+      <div class="panel panel-default">
+        <div class="panel-body" id="desc">
+          <td>Description:<%= video.description %></td>
+        </div>
+      </div>
+      </tr>
+        <td><%= link_to 'Show', video %></td>
+        <td><%= link_to 'Edit', edit_video_path(video) %></td>
+        <td><%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
