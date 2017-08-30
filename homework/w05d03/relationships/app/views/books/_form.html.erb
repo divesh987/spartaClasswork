@@ -16,18 +16,14 @@
     <%= form.text_field :title, id: :book_title %>
   </div>
 
-  <div class="field">
-    <%= form.label :author %>
-    <select>
-    <% @authors.each do |author| %> 
-      <option value="volvo"><%=author.name%></option>
-    <%end%>
-    </select>
-  </div>
 
   <div class="field">
     <%= form.label :author_id %>
-    <%= form.number_field :author_id, id: :book_author_id %>
+    <select name="selection">
+    <% @authors.each do |author| %> 
+      <option ><%=author.name%></option>
+    <%end%>
+    </select> 
   </div>
 
   <div class="actions">
