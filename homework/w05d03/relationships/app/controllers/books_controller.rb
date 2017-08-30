@@ -5,6 +5,7 @@ class BooksController < ApplicationController
   # GET /books.json
   def index
     @books = Book.all
+    # @bookauthor=@books.author
   end
 
   # GET /books/1
@@ -15,10 +16,12 @@ class BooksController < ApplicationController
   # GET /books/new
   def new
     @book = Book.new
+    @authors= Author.all
   end
 
   # GET /books/1/edit
   def edit
+    @authors= Author.all
   end
 
   # POST /books

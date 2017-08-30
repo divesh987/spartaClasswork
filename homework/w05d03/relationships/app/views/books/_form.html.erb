@@ -18,7 +18,11 @@
 
   <div class="field">
     <%= form.label :author %>
-    <%= form.text_field :author, id: :book_author %>
+    <select>
+    <% @authors.each do |author| %> 
+      <option value="volvo"><%=author.name%></option>
+    <%end%>
+    </select>
   </div>
 
   <div class="field">
