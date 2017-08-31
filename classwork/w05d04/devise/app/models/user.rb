@@ -4,4 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
     has_many :posts, dependent: :destroy
+    validates :name, format: { with: /\A[a-zA-Z]+\z/,
+    message: "only allows letters" }
 end
