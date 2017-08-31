@@ -6,4 +6,5 @@ class User < ApplicationRecord
     has_many :posts, dependent: :destroy
     validates :name, format: { with: /\A[a-zA-Z]+\z/,
     message: "only allows letters" }
+    validates :name, length: { maximum: 12 }
 end
