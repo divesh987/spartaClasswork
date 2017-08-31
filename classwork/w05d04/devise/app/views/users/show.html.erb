@@ -3,10 +3,12 @@
 <h1>My Posts</h1>
 <br>
 <br>
-<% @user.posts.each do |userpost|%>
- <h3> <%= userpost.title %></h3>
-<p> <%= userpost.body %></p>
-<a href="/users/myposts/<%= userpost.id%>">Show</a>
+<% @user.posts.each do |post|%>
+ <h3> <%= post.title %></h3>
+<p> <%= post.body %></p>
+<a href="/users/myposts/<%= post.id%>">Show</a>
+<td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 <% end %>
 
 
