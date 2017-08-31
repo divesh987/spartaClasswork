@@ -6,8 +6,9 @@
 <% @user.posts.each do |userpost|%>
  <h3> <%= userpost.title %></h3>
 <p> <%= userpost.body %></p>
-
+<a href="/users/myposts/<%= userpost.id%>">Show</a>
 <% end %>
+
 
 
 
