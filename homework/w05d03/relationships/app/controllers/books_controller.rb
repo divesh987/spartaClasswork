@@ -30,8 +30,9 @@ class BooksController < ApplicationController
     book_author= params[:selection]
     a=Author.find_by(name: book_author)
     title = params[:title]
-    puts params[:book_title]
-    @book = Book.new(title: title, author_id: a.id)
+    puts title
+    @book = Book.new(book_params)
+    @book.author_id= a.id
 
     respond_to do |format|
       if @book.save
@@ -50,9 +51,9 @@ class BooksController < ApplicationController
     book_author= params[:selection]
     a=Author.find_by(name: book_author)
     title = params[:title]
-    
+
     respond_to do |format|
-      if @book.update(title: title, author_id: a.id)
+      if @book.update(book_params) && @book.update(author_id: a.id)
         format.html { redirect_to @book, notice: 'Book was successfully updated.' }
         format.json { render :show, status: :ok, location: @book }
       else
