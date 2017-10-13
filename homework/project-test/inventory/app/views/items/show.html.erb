@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @item.description %>
+</p>
+
+<p>
+  <strong>Serial:</strong>
+  <%= @item.serial %>
+</p>
+
+<p>
+  <strong>Academy:</strong>
+  <%= @item.academy_id %>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<a href="/items">Back</a>
