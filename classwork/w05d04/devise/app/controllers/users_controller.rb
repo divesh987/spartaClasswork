@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 
 	def post
 		@post = Post.find(params[:id])
+
 	end
 	
 
